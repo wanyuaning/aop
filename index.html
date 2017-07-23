@@ -1,0 +1,21 @@
+<script src="aop.js?v=3"></script>
+<script>
+
+function test(){ 
+	alert(2);
+	return 'AOP Test';
+}
+
+var result = test.before(function(){
+	alert(1);
+	//return false;
+});
+
+result.after(function(){
+	alert(3);
+	//return false;
+});
+console.log(result());
+
+
+</script>
